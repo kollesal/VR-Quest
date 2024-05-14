@@ -1,0 +1,4 @@
+*.meta
+Library/
+Logs/
+quest_build_BurstDebugInformation_DoNotShip/
