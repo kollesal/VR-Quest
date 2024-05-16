@@ -32,6 +32,8 @@
    - Performance Originaldaten + augmentierte Daten ohne Nullpunkte: 97%
    - Performance Originaldaten + augmentierte Daten ohne Nullpunkte und X_train, y_train: 99%
 
+### Nächste Schritte:
+- Dokumentation
   
 ## 02.05.2024
 - Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion
