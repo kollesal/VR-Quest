@@ -6,7 +6,7 @@
 - Dokumentation
 - Projektmanagement
 - Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion
-- Export von Körperkoordinaten in Unity mit Vergleich MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind)
+- Export von Körperkoordinaten in Unity mit Datenanalyse MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind)
 - Bestehendes Modell wird verglichen
 
 - VR Umgebung erstellt -> Zusatzpunkt
@@ -16,6 +16,23 @@
 - Dies könnte auch als Baseline für unsere Lösung dienen.
 - Bewegungen von einem Video via Keypoints Extraktion zu einem Avatar übertragen. (dies wäre die BA)
 
+## 16.05.2024
+- Dokumentation
+- Projektmanagement
+- Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion
+  Sitting ist schlechter als T-Pose, deswegen wird T-Pose verwendet
+- Export von Körperkoordinaten in Unity mit Datenanlyse MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind)
+  Datenbereinigung zusammen anschauen -> Modell Nils
+  
+- Bestehendes Modell wird verglichen
+  Vergleich wurde mit X_train und y_train vorgenommen:
+   - Performance besprechen. Gemäss BA Nils wird folgendes Modell verwendet: RNN 5 Frames und 64  Neurons
+   - Performance nur Originaldaten: 93% (in BA: 89%)
+   - Performance Originaldaten + augmentierte Daten: 91%
+   - Performance Originaldaten + augmentierte Daten ohne Nullpunkte: 97%
+   - Performance Originaldaten + augmentierte Daten ohne Nullpunkte und X_train, y_train: 99%
+
+  
 ## 02.05.2024
 - Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion
    - Erledigt 
