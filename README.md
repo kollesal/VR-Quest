@@ -53,12 +53,12 @@
 - "Hauptteil" ist durch und habe Erkenntnisse. -> Falls diese so i.O. sind -> Start Dokumentation 2.0
 - VR Brille in VR Umgebung anfügen
 - Zusätzliche Analysen von Daten (verschiedene Einstellungen DeepMotion)
-- API Stand // RPA
+- API Stand // RPA -> Wird nicht umgesetzt
 
 - Schulter Distanz aller Bewegungen ausrechnen -> Gewichtung verwenden DeepMotion hat 5x Gewichtung und MediaPipe 1x nehmen
-- Alle Zahlen durch diesen Wert Teilen
-- Kompensiert / Nicht Kompensiert bei Analyse ergänzen
-- Nicht bewegte Hand analysieren. Funktioniert es dort?
+  - Alle Zahlen durch diesen Wert Teilen
+  - Kompensiert / Nicht Kompensiert bei Analyse ergänzen
+  - Nicht bewegte Hand analysieren. Funktioniert es dort?
 
 ## 18.04.2024: 2. Zwischenbesprechung - BA
 Protokoll wird auf MoLeNa hochgeladen
