@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{30198380-8B20-EDB9-D1E9-7317E56ED54C}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader">
+    <Files>
+      <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VR Quest" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c2827d63-3baf-4d5a-baab-59255dce384a" />
+</Properties>
