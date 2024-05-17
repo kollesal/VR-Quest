@@ -6,7 +6,7 @@
 - Dokumentation
 - Projektmanagement
 - Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion
-- Export von Körperkoordinaten in Unity mit Vergleich MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind)
+- Export von Körperkoordinaten in Unity mit Datenanalyse MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind)
 - Bestehendes Modell wird verglichen
 
 - VR Umgebung erstellt -> Zusatzpunkt
@@ -16,6 +16,25 @@
 - Dies könnte auch als Baseline für unsere Lösung dienen.
 - Bewegungen von einem Video via Keypoints Extraktion zu einem Avatar übertragen. (dies wäre die BA)
 
+## 16.05.2024
+- Dokumentation
+- Projektmanagement
+- Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion
+  Sitting ist schlechter als T-Pose, deswegen wird T-Pose verwendet
+- Export von Körperkoordinaten in Unity mit Datenanlyse MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind)
+  Datenbereinigung zusammen anschauen -> Modell Nils
+  
+- Bestehendes Modell wird verglichen
+  Vergleich wurde mit X_train und y_train vorgenommen:
+   - Performance besprechen. Gemäss BA Nils wird folgendes Modell verwendet: RNN 5 Frames und 64  Neurons
+   - Performance nur Originaldaten: 93% (in BA: 89%)
+   - Performance Originaldaten + augmentierte Daten: 91%
+   - Performance Originaldaten + augmentierte Daten ohne Nullpunkte: 97%
+   - Performance Originaldaten + augmentierte Daten ohne Nullpunkte und X_train, y_train: 99%
+
+### Nächste Schritte:
+- Dokumentation
+  
 ## 02.05.2024
 - Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion
    - Erledigt 
@@ -34,12 +53,12 @@
 - "Hauptteil" ist durch und habe Erkenntnisse. -> Falls diese so i.O. sind -> Start Dokumentation 2.0
 - VR Brille in VR Umgebung anfügen
 - Zusätzliche Analysen von Daten (verschiedene Einstellungen DeepMotion)
-- API Stand // RPA
+- API Stand // RPA -> Wird nicht umgesetzt
 
 - Schulter Distanz aller Bewegungen ausrechnen -> Gewichtung verwenden DeepMotion hat 5x Gewichtung und MediaPipe 1x nehmen
-- Alle Zahlen durch diesen Wert Teilen
-- Kompensiert / Nicht Kompensiert bei Analyse ergänzen
-- Nicht bewegte Hand analysieren. Funktioniert es dort?
+  - Alle Zahlen durch diesen Wert Teilen
+  - Kompensiert / Nicht Kompensiert bei Analyse ergänzen
+  - Nicht bewegte Hand analysieren. Funktioniert es dort?
 
 ## 18.04.2024: 2. Zwischenbesprechung - BA
 Protokoll wird auf MoLeNa hochgeladen
