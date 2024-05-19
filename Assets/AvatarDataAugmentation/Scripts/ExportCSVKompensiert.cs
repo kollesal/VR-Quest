@@ -9,11 +9,12 @@ public class ExportCSVKompensiert : MonoBehaviour
     string filenameK = "";
     string pathK = "";
     string compensationK = "";
-    int frameCountK = 1; // Variable to keep track of the frame count
-    private bool isNewAnimationK = false; // Flag to indicate if a new animation has started
+    int frameCountK = 1; 
+    // Variable für Frame Count
+    private bool isNewAnimationK = false; 
+    // Flag, um anzuzeigen, ob es eine neue Animation ist
     private float lastAnimationTimeK = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         animK = GetComponent<Animator>();
@@ -35,13 +36,12 @@ public class ExportCSVKompensiert : MonoBehaviour
         }
     }
 
-    // Delay so that the Avatar Positioning isn't recorded
+    // Verzug damit Positionierung von Avatar nicht gezeigt wird
     IEnumerator StartRecordingAfterDelayK(float delay)
     {
-        // Wait for the specified delay
         yield return new WaitForSeconds(delay);
 
-        // Start recording
+        // Start mit Aufnahme
         StartCoroutine(RecordMovementK());
     }
 
@@ -49,7 +49,6 @@ public class ExportCSVKompensiert : MonoBehaviour
     {
         while (true)
         {
-            //frameCountK++;
             PushLineK();
 
             // Original Video is 4.5S and has 172 Frames.
@@ -61,31 +60,22 @@ public class ExportCSVKompensiert : MonoBehaviour
             // 8 seconds / 299 frames ≈ 0.026 seconds per frame
 
             yield return new WaitForSeconds(0.026f);
-            // yield return new WaitForEndOfFrame();
         }
     }
 
     private void PushLineK()
     {
-        // Get the current path
         pathK = filenameK;
 
-        // Get the current time
         string currentTime = Time.time.ToString();
 
-        // Get compensation
+        // Definition von Compensation
         compensationK = "True";
 
 
-        // Get the transform of the head bone
         Transform headTransform = animK.GetBoneTransform(HumanBodyBones.Head);
-        // Extract the position of the head
         Vector3 headPosition = headTransform.position;
 
-        // Get the position of the head directly from the Animator
-        // Vector3 headPosition = transform.position;
-
-        // Get the transform of the R shoulder bone
         Transform rShoulderTransform = animK.GetBoneTransform(HumanBodyBones.RightShoulder);
         Vector3 rShoulderPosition = rShoulderTransform.position;
 
@@ -147,7 +137,7 @@ public class ExportCSVKompensiert : MonoBehaviour
         Vector3 rFootIndexPosition = rFootIndexTransform.position;
 
 
-        // Extract x, y, and z components separately
+        // Extraktion Werte von x, y, und z
         string Headx = headPosition.x.ToString();
         string Heady = headPosition.y.ToString();
         string Headz = headPosition.z.ToString();
@@ -280,7 +270,7 @@ public class ExportCSVKompensiert : MonoBehaviour
         string rFootIndexY = rFootIndexPosition.y.ToString();
         string rFootIndexZ = rFootIndexPosition.z.ToString();
 
-        // Write the data to the CSV file
+        // Daten in CSV schreiben
         using (TextWriter tw = new StreamWriter(filenameK, true))
         {
             tw.WriteLine(pathK + "," + frameCountK + "," + compensationK + "," +
@@ -319,10 +309,9 @@ public class ExportCSVKompensiert : MonoBehaviour
                                              rFootIndexX + "," + rFootIndexY + "," + rFootIndexZ);
 
         }
-        frameCountK++; // Increment frame count   
+        frameCountK++; 
     }
 
-    // Update is called once per frame
     void Update()
     {
         float currentAnimationTimeK = GetCurrentAnimationTimeK();
