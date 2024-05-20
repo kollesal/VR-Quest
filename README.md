@@ -1,4 +1,17 @@
 # BA Data Augmentation via Game Engine
+
+## Anleitung zum Aufbau der Umgebung
+1. GitHub Projekt in Ordner kopieren
+2. Folgendes Projekt öffnen:
+![image](https://github.com/kollesal/VR-Quest/assets/106104526/0239afa4-6203-417d-90eb-0050598ceef1)
+
+### Wo können die 5 Ziele der BA gefunden werden?
+- Dokumentation: https://zhaw.sharepoint.com/:f:/r/sites/DataAugmentationviaGameEngine/Freigegebene%20Dokumente/General/Bachelorarbeit?csf=1&web=1&e=yo0ug7
+- Projektmanagement: https://github.zhaw.ch/users/kollesal/projects/3/views/1
+- Veränderung der Animationen gemäss den Einstellungsveränderungen von DeepMotion: Assets/AvatarDataAugmentation/01 Collecting Data: DeepMotion Animation
+- Bestehendes Modell wird verglichen: Assets/AvatarDataAugmentation/02 Data Augmentation: Modellerweiterung
+- Export von Körperkoordinaten in Unity mit Datenanalyse MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind): Assets/AvatarDataAugmentation/03 Data Analysis: DeepMotion and MediaPipe
+
 ## Übergeordnetes Ziel:
 - Wie kann ich aus 1 Video verschiedene Videos/Animationen erstellen
 
