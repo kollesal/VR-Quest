@@ -3,6 +3,7 @@
 ## Anleitung zum Aufbau der Umgebung
 1. GitHub Projekt in Ordner kopieren
 2. Folgendes Projekt öffnen:
+
 ![image](https://github.com/kollesal/VR-Quest/assets/106104526/0239afa4-6203-417d-90eb-0050598ceef1)
 
 ### Wo können die 5 Ziele der BA gefunden werden?
@@ -12,6 +13,8 @@
 - Bestehendes Modell wird verglichen: Assets/AvatarDataAugmentation/02 Data Augmentation: Modellerweiterung
 - Export von Körperkoordinaten in Unity mit Datenanalyse MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind): Assets/AvatarDataAugmentation/03 Data Analysis: DeepMotion and MediaPipe
 
+- VR Umgebung erstellt: In Projekt und Dokumentation enthalten
+  
 ## Übergeordnetes Ziel:
 - Wie kann ich aus 1 Video verschiedene Videos/Animationen erstellen
 
