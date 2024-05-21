@@ -23,7 +23,7 @@
 
     <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/0f4bb417-f7b7-4327-a0ce-30abcaff1b4c">
 
-      <b>!Wichtig!</b> Bei beiden die Tags 'Kompensiert' und 'Nicht Kompensiert' setzen!
+      !Wichtig! Bei beiden die Tags 'Kompensiert' und 'Nicht Kompensiert' setzen!
 
 6. Den Code laufen lassen. Das 1. Mal wird es fehlschlagen, beim 2. Mal läuft es durch.
 
