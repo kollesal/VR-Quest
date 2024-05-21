@@ -9,13 +9,23 @@
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/7772920f-7850-4a47-9ae4-044cefa796d8">
 
-3. Folgende Ordner werden benutzt:
+3. Sample Scene öffnen (im Assets/AvatarDataAugmentation/Scenes und NICHT Assets/Scenes)
 
-   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/738cfaa7-e44f-4223-b0fb-129fec2f9c0f">
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/2faa822c-2cfc-4751-ba4d-8294045e3663">
 
-4. Aufsetzen eines Beispiels:
+4. Fehler Beheben:
+   4.1 GameObject: Script 'AvatarManager' hinzufügen
+   
+    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/d86cc75c-0843-4bfc-ab1e-9f5f27bf6353">
 
-   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/a4ebe221-e0b8-4060-8517-77af041ff496">
+   4.2 Avatars ersetzen: Mit GameObject 'x' 2 Avatare hinzufügen. Name + Tag ergänzen:
+
+    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/0f4bb417-f7b7-4327-a0ce-30abcaff1b4c">
+
+      !Wichtig! Bei beiden die Tags 'Kompensiert' und 'Nicht Kompensiert' setzen!
+
+5. Den Code laufen lassen. Das 1. Mal wird es fehlschlagen, beim 2. Mal läuft es durch.
+
 
 ### Wo können die 5 Ziele der BA gefunden werden?
 - Dokumentation: https://zhaw.sharepoint.com/:f:/r/sites/DataAugmentationviaGameEngine/Freigegebene%20Dokumente/General/Bachelorarbeit?csf=1&web=1&e=yo0ug7
