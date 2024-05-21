@@ -1,22 +1,28 @@
-using System.IO;
+using UnityEngine;
 using UnityEditor;
 using UnityEditor.Animations;
-using UnityEngine;
+using System.IO;
 
 public class AvatarManager : MonoBehaviour
 {
-    public RuntimeAnimatorController drinkingNichtKompensiertController;
-    public RuntimeAnimatorController drinkingKompensiertController01;
-
+    private RuntimeAnimatorController drinkingNichtKompensiertController;
+    private RuntimeAnimatorController drinkingKompensiertController01;
 
     void Start()
     {
-#if UNITY_EDITOR
-        ChangeAnimationsToHumanoid();
-#endif
-
+        LoadAnimatorControllers();
         SetAvatarRotation();
         AssignAnimatorController();
+        ChangeAnimationsToHumanoid();
+    }
+
+    void LoadAnimatorControllers()
+    {
+        string drinkingNichtKompensiertControllerPath = "Assets/AvatarDataAugmentation/01 Collecting Data: DeepMotion Animations/nichtKompensiert/drinkingNichtKompensiertController.controller";
+        string drinkingKompensiertController01Path = "Assets/AvatarDataAugmentation/01 Collecting Data: DeepMotion Animations/kompensiert/drinkingKompensiertController01.controller";
+
+        drinkingNichtKompensiertController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(drinkingNichtKompensiertControllerPath);
+        drinkingKompensiertController01 = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(drinkingKompensiertController01Path);
     }
 
     void SetAvatarRotation()
@@ -76,28 +82,71 @@ public class AvatarManager : MonoBehaviour
             }
         }
     }
-    // New function to change animation type to Humanoid, assign an avatar, and add to the specified Animator Controller
+
     void ChangeAnimationsToHumanoid()
     {
-        // Get all animation clips in the project
         string[] guids = AssetDatabase.FindAssets("t:AnimationClip");
         foreach (string guid in guids)
         {
             string path = AssetDatabase.GUIDToAssetPath(guid);
             ModelImporter modelImporter = AssetImporter.GetAtPath(path) as ModelImporter;
 
+            if (modelImporter != null)
+            {
+                modelImporter.animationType = ModelImporterAnimationType.Human;
+                modelImporter.avatarSetup = ModelImporterAvatarSetup.CreateFromThisModel;
 
-            // Set the animation type to Humanoid
-            modelImporter.animationType = ModelImporterAnimationType.Human;
+                string folderName = Path.GetDirectoryName(path);
+                RuntimeAnimatorController targetController = null;
 
-            // Set the avatar definition to "Create From This Model"
-            modelImporter.avatarSetup = ModelImporterAvatarSetup.CreateFromThisModel;
+                if (folderName.Contains("kompensiert"))
+                {
+                    targetController = drinkingKompensiertController01;
+                }
+                else if (folderName.Contains("nichtKompensiert"))
+                {
+                    targetController = drinkingNichtKompensiertController;
+                }
 
-            // Apply the changes
-            AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
-            Debug.Log("Changed " + path + " to Humanoid and set avatar definition to 'Create From This Model'.");
+                AnimationClip clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(path);
+                if (clip != null && targetController != null)
+                {
+                    AnimatorController animatorController = AssetDatabase.LoadAssetAtPath<AnimatorController>(AssetDatabase.GetAssetPath(targetController));
+                    if (animatorController != null)
+                    {
+                        AnimatorControllerLayer[] layers = animatorController.layers;
+                        if (layers.Length > 0)
+                        {
+                            AnimatorStateMachine stateMachine = layers[0].stateMachine;
+                            if (stateMachine != null)
+                            {
+                                AnimatorState newState = stateMachine.AddState(clip.name);
+                                newState.motion = clip;
+
+                                // Add a transition from the previous state to the new state
+                                if (stateMachine.states.Length > 1)
+                                {
+                                    AnimatorState previousState = stateMachine.states[stateMachine.states.Length - 2].state;
+                                    AnimatorStateTransition transition = previousState.AddTransition(newState);
+                                    transition.hasExitTime = true;
+                                    transition.exitTime = 1.0f;
+                                    transition.duration = 0.25f;
+                                }
+
+                                // Set the first state as the default state
+                                if (stateMachine.states.Length == 1)
+                                {
+                                    stateMachine.defaultState = newState;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
+                Debug.Log("Changed " + path + " to Humanoid, assigned avatar, and added to appropriate Animator Controller.");
+            }
         }
-
 
         AssetDatabase.Refresh();
     }

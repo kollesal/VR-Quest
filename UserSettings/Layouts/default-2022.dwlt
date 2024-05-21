@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1386
     height: 916
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 51
+  controlID: 73
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1095,10 +1095,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 9c9714c14018345e199293712fd387cf,
+  m_AnimatorController: {fileID: 9100000, guid: 85ac7e5e331e04bcbaf751b040eac421,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -3457876949971556977, guid: 9c9714c14018345e199293712fd387cf,
+  - m_Target: {fileID: 7209336516084563911, guid: 85ac7e5e331e04bcbaf751b040eac421,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 78420000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 24fbffff
       m_RenameOverlay:
@@ -1321,7 +1321,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AvatarDataAugmentation/Scripts
+    - 'Assets/AvatarDataAugmentation/01 Collecting Data: DeepMotion Animations/kompensiert'
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1363,24 +1363,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 190}
+    scrollPos: {x: 0, y: 48.625793}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000487300004a7300004c7300004e7300005073000052730000547300005673000058730000
+    m_ExpandedIDs: ffffffff00000000487300004a7300004c7300004e7300005073000052730000567300005873000040750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AvatarManager
-      m_OriginalName: AvatarManager
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17016
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
