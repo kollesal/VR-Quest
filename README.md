@@ -3,19 +3,19 @@
 ## Anleitung zum Aufbau der Umgebung
 1. GitHub Projekt in Ordner kopieren
 
-<img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/bbe7b2fe-76e4-428a-ae57-5801d97c21cd">
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/bbe7b2fe-76e4-428a-ae57-5801d97c21cd">
 
 2. Das Projekt folgendermassen öffnen:
 
-<img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/7772920f-7850-4a47-9ae4-044cefa796d8">
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/7772920f-7850-4a47-9ae4-044cefa796d8">
 
 3. Folgende Ordner werden benutzt:
 
-   <img width="452" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/738cfaa7-e44f-4223-b0fb-129fec2f9c0f">
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/738cfaa7-e44f-4223-b0fb-129fec2f9c0f">
 
 4. Aufsetzen eines Beispiels:
 
-<img width="452" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/a4ebe221-e0b8-4060-8517-77af041ff496">
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/a4ebe221-e0b8-4060-8517-77af041ff496">
 
 ### Wo können die 5 Ziele der BA gefunden werden?
 - Dokumentation: https://zhaw.sharepoint.com/:f:/r/sites/DataAugmentationviaGameEngine/Freigegebene%20Dokumente/General/Bachelorarbeit?csf=1&web=1&e=yo0ug7
