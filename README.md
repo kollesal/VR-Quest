@@ -9,7 +9,7 @@
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/7772920f-7850-4a47-9ae4-044cefa796d8">
 
-3. Scene öffnen (im Assets/AvatarDataAugmentation/Scenes und NICHT Assets/Scenes)
+3. Scene "AvatarExport" öffnen (im Assets/AvatarDataAugmentation/Scenes und NICHT Assets/Scenes)
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/2faa822c-2cfc-4751-ba4d-8294045e3663">
 
