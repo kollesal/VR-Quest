@@ -130,20 +130,9 @@ public class AvatarManager : MonoBehaviour
                                 AnimatorState newState = stateMachine.AddState(clip.name);
                                 newState.motion = clip;
 
-                                AnimatorState previousState = null;
-                                foreach (var state in stateMachine.states)
+                                if (stateMachine.states.Length > 1)
                                 {
-                                    if (previousState != null)
-                                    {
-                                        AnimatorStateTransition transition = previousState.AddTransition(newState);
-                                        transition.hasExitTime = true;
-                                        transition.exitTime = 1.0f;
-                                    }
-                                    previousState = state.state;
-                                }
-
-                                if (previousState != null)
-                                {
+                                    AnimatorState previousState = stateMachine.states[stateMachine.states.Length - 2].state;
                                     AnimatorStateTransition transition = previousState.AddTransition(newState);
                                     transition.hasExitTime = true;
                                     transition.exitTime = 1.0f;
