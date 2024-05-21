@@ -25,7 +25,7 @@
 
       !Wichtig! Bei beiden die Tags 'Kompensiert' und 'Nicht Kompensiert' setzen!
 
-6. Den Code laufen lassen. Das 1. Mal wird es fehlschlagen, beim 2. Mal läuft es durch.
+5. Den Code laufen lassen. Das 1. Mal wird es fehlschlagen, beim 2. Mal läuft es durch.
    Manchmal läuft es ein bisschen lange. Solange es nicht in T-Pose ist, wird es laufen.
 
 
