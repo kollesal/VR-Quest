@@ -2,10 +2,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AvatarDataAugmentation/Scripts/AvatarScaler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AvatarDataAugmentation/Scripts/AvatarManager.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader" />
-      <File FileName="Assets/AvatarDataAugmentation/Scripts/AvatarScaler.cs" Line="26" Column="1" />
+      <File FileName="Assets/AvatarDataAugmentation/Scripts/AvatarScaler.cs" Line="68" Column="14" />
+      <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVNichtKompensiert.cs" Line="16" Column="41" />
+      <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVKompensiert.cs" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
