@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{30198380-8B20-EDB9-D1E9-7317E56ED54C}|">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4dbcf2bb-7586-4611-a199-d62061e18e26" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="df743b6c-d724-4188-a234-55392e73c67d" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AvatarDataAugmentation/Scripts/AvatarManager.cs">
@@ -11,7 +11,7 @@
       <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader" />
       <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVNichtKompensiert.cs" />
       <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVKompensiert.cs" />
-      <File FileName="Assets/AvatarDataAugmentation/Scripts/AvatarManager.cs" Line="12" Column="27" />
+      <File FileName="Assets/AvatarDataAugmentation/Scripts/AvatarManager.cs" Line="107" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
