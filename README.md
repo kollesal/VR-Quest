@@ -5,11 +5,11 @@
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/bbe7b2fe-76e4-428a-ae57-5801d97c21cd">
 
-2. Das Projekt folgendermassen öffnen:
+2. Das Projekt "VR-Quest" folgendermassen öffnen:
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/7772920f-7850-4a47-9ae4-044cefa796d8">
 
-3. Sample Scene öffnen (im Assets/AvatarDataAugmentation/Scenes und NICHT Assets/Scenes)
+3. Scene öffnen (im Assets/AvatarDataAugmentation/Scenes und NICHT Assets/Scenes)
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/2faa822c-2cfc-4751-ba4d-8294045e3663">
 
