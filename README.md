@@ -14,17 +14,18 @@
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/2faa822c-2cfc-4751-ba4d-8294045e3663">
 
 4. Fehler Beheben:
-   4.1 GameObject: Script 'AvatarManager' hinzufügen
+
+- 4.1 GameObject: Script 'AvatarManager' hinzufügen
    
     <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/d86cc75c-0843-4bfc-ab1e-9f5f27bf6353">
 
-   4.2 Avatars ersetzen: Mit GameObject 'x' 2 Avatare hinzufügen. Name + Tag ergänzen:
+- 4.2 Avatars ersetzen: Mit GameObject 'x' 2 Avatare hinzufügen. Name + Tag ergänzen:
 
     <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/0f4bb417-f7b7-4327-a0ce-30abcaff1b4c">
 
-      !Wichtig! Bei beiden die Tags 'Kompensiert' und 'Nicht Kompensiert' setzen!
+      <b>!Wichtig!</b> Bei beiden die Tags 'Kompensiert' und 'Nicht Kompensiert' setzen!
 
-5. Den Code laufen lassen. Das 1. Mal wird es fehlschlagen, beim 2. Mal läuft es durch.
+6. Den Code laufen lassen. Das 1. Mal wird es fehlschlagen, beim 2. Mal läuft es durch.
 
 
 ### Wo können die 5 Ziele der BA gefunden werden?
