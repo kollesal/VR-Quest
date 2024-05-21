@@ -7,22 +7,25 @@ public class AvatarManager : MonoBehaviour
 {
     private RuntimeAnimatorController drinkingNichtKompensiertController;
     private RuntimeAnimatorController drinkingKompensiertController01;
+    private Avatar avatar;
 
     void Start()
     {
-        LoadAnimatorControllers();
+        LoadAnimatorControllersAndAvatar();
         SetAvatarRotation();
         AssignAnimatorController();
         ChangeAnimationsToHumanoid();
     }
 
-    void LoadAnimatorControllers()
+    void LoadAnimatorControllersAndAvatar()
     {
         string drinkingNichtKompensiertControllerPath = "Assets/AvatarDataAugmentation/01 Collecting Data: DeepMotion Animations/nichtKompensiert/drinkingNichtKompensiertController.controller";
         string drinkingKompensiertController01Path = "Assets/AvatarDataAugmentation/01 Collecting Data: DeepMotion Animations/kompensiert/drinkingKompensiertController01.controller";
+        string avatarPath = "Assets/AvatarDataAugmentation/01 Collecting Data: DeepMotion Animations/x.fbx"; // Replace with actual path
 
         drinkingNichtKompensiertController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(drinkingNichtKompensiertControllerPath);
         drinkingKompensiertController01 = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(drinkingKompensiertController01Path);
+        avatar = AssetDatabase.LoadAssetAtPath<Avatar>(avatarPath);
     }
 
     void SetAvatarRotation()
@@ -34,7 +37,6 @@ public class AvatarManager : MonoBehaviour
             currentRotation.eulerAngles = new Vector3(currentRotation.eulerAngles.x, 180, 180);
             avatar.transform.rotation = currentRotation;
             avatar.transform.localScale = new Vector3(500, 500, 500);
-            avatar.transform.position = new Vector3(113f, 0f, 0f);
         }
 
         GameObject[] avatarsN = GameObject.FindGameObjectsWithTag("Nicht Kompensiert");
@@ -44,7 +46,6 @@ public class AvatarManager : MonoBehaviour
             currentRotation.eulerAngles = new Vector3(currentRotation.eulerAngles.x, 180, 180);
             avatar.transform.rotation = currentRotation;
             avatar.transform.localScale = new Vector3(500, 500, 500);
-            avatar.transform.position = new Vector3(-878f, 0f, 0f);
         }
     }
 
@@ -60,6 +61,7 @@ public class AvatarManager : MonoBehaviour
             }
 
             animator.runtimeAnimatorController = drinkingKompensiertController01;
+            animator.avatar = avatar;
             ExportCSVKompensiert exportCSVComponent = obj.GetComponent<ExportCSVKompensiert>();
             if (exportCSVComponent == null)
             {
@@ -77,6 +79,7 @@ public class AvatarManager : MonoBehaviour
             }
 
             animatorN.runtimeAnimatorController = drinkingNichtKompensiertController;
+            animatorN.avatar = avatar;
             ExportCSVNichtKompensiert exportCSVComponent = obj.GetComponent<ExportCSVNichtKompensiert>();
             if (exportCSVComponent == null)
             {
@@ -125,20 +128,23 @@ public class AvatarManager : MonoBehaviour
                                 AnimatorState newState = stateMachine.AddState(clip.name);
                                 newState.motion = clip;
 
-                                // Add a transition from the previous state to the new state
-                                if (stateMachine.states.Length > 1)
+                                AnimatorState previousState = null;
+                                foreach (var state in stateMachine.states)
                                 {
-                                    AnimatorState previousState = stateMachine.states[stateMachine.states.Length - 2].state;
+                                    if (previousState != null)
+                                    {
+                                        AnimatorStateTransition transition = previousState.AddTransition(newState);
+                                        transition.hasExitTime = true;
+                                        transition.exitTime = 1.0f;
+                                    }
+                                    previousState = state.state;
+                                }
+
+                                if (previousState != null)
+                                {
                                     AnimatorStateTransition transition = previousState.AddTransition(newState);
                                     transition.hasExitTime = true;
                                     transition.exitTime = 1.0f;
-                                    transition.duration = 0.25f;
-                                }
-
-                                // Set the first state as the default state
-                                if (stateMachine.states.Length == 1)
-                                {
-                                    stateMachine.defaultState = newState;
                                 }
                             }
                         }
