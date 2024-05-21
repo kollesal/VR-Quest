@@ -34,6 +34,7 @@ public class AvatarManager : MonoBehaviour
             currentRotation.eulerAngles = new Vector3(currentRotation.eulerAngles.x, 180, 180);
             avatar.transform.rotation = currentRotation;
             avatar.transform.localScale = new Vector3(500, 500, 500);
+            avatar.transform.position = new Vector3(113f, 0f, 0f);
         }
 
         GameObject[] avatarsN = GameObject.FindGameObjectsWithTag("Nicht Kompensiert");
@@ -43,6 +44,7 @@ public class AvatarManager : MonoBehaviour
             currentRotation.eulerAngles = new Vector3(currentRotation.eulerAngles.x, 180, 180);
             avatar.transform.rotation = currentRotation;
             avatar.transform.localScale = new Vector3(500, 500, 500);
+            avatar.transform.position = new Vector3(-878f, 0f, 0f);
         }
     }
 
