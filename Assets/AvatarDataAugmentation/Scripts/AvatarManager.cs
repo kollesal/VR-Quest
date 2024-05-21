@@ -1,3 +1,6 @@
+using System.IO;
+using UnityEditor;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class AvatarManager : MonoBehaviour
@@ -5,8 +8,13 @@ public class AvatarManager : MonoBehaviour
     public RuntimeAnimatorController drinkingNichtKompensiertController;
     public RuntimeAnimatorController drinkingKompensiertController01;
 
+
     void Start()
     {
+#if UNITY_EDITOR
+        ChangeAnimationsToHumanoid();
+#endif
+
         SetAvatarRotation();
         AssignAnimatorController();
     }
@@ -67,5 +75,30 @@ public class AvatarManager : MonoBehaviour
                 obj.AddComponent<ExportCSVNichtKompensiert>();
             }
         }
+    }
+    // New function to change animation type to Humanoid, assign an avatar, and add to the specified Animator Controller
+    void ChangeAnimationsToHumanoid()
+    {
+        // Get all animation clips in the project
+        string[] guids = AssetDatabase.FindAssets("t:AnimationClip");
+        foreach (string guid in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            ModelImporter modelImporter = AssetImporter.GetAtPath(path) as ModelImporter;
+
+
+            // Set the animation type to Humanoid
+            modelImporter.animationType = ModelImporterAnimationType.Human;
+
+            // Set the avatar definition to "Create From This Model"
+            modelImporter.avatarSetup = ModelImporterAvatarSetup.CreateFromThisModel;
+
+            // Apply the changes
+            AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
+            Debug.Log("Changed " + path + " to Humanoid and set avatar definition to 'Create From This Model'.");
+        }
+
+
+        AssetDatabase.Refresh();
     }
 }

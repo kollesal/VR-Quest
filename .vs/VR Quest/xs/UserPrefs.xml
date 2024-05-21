@@ -1,13 +1,17 @@
 ﻿<Properties StartupConfiguration="{30198380-8B20-EDB9-D1E9-7317E56ED54C}|">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5ce0daf2-48d9-41ff-8867-d517e8c703e9" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AvatarDataAugmentation/Scripts/AvatarManager.cs">
     <Files>
-      <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader" />
-      <File FileName="Assets/AvatarDataAugmentation/Scripts/AvatarScaler.cs" Line="68" Column="14" />
-      <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVNichtKompensiert.cs" Line="16" Column="41" />
-      <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVKompensiert.cs" Line="14" Column="1" />
+      <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader" Line="1" Column="1" />
+      <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVNichtKompensiert.cs" />
+      <File FileName="Assets/AvatarDataAugmentation/Scripts/ExportCSVKompensiert.cs" />
+      <File FileName="Assets/AvatarDataAugmentation/Scripts/AvatarManager.cs" Line="8" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,8 +27,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="06976933-9235-4d64-9ef8-4b31e206ee93" />
 </Properties>
