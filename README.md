@@ -3,9 +3,9 @@
 ## Anleitung zum Aufbau der Umgebung
 
 Hier eine kurze Veranschaulichung, wie die Daten verarbeitet werden:
-- Unity Export: Erstellt File "KeypointsExport(Nicht)Kompensiert"
-- Jupyter Notebook Pipeline: Liest File "KeypointsExport(Nicht)Kompensiert" ein und exportiert File "KeypointsBereinigt(Nicht)Kompensiert"
-- Jupyter Notebook Datenanalse: Liest File "KeypointsBereinigt(Nicht)Kompensiert" ein
+- Unity Export: Erstellt File "Keypoints**Export**(Nicht)Kompensiert"
+- Jupyter Notebook Pipeline: Liest File "Keypoints**Export**(Nicht)Kompensiert" ein und exportiert File "Keypoints**Bereinigt**(Nicht)Kompensiert"
+- Jupyter Notebook Datenanalse: Liest File "Keypoints**Bereinigt**(Nicht)Kompensiert" ein
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -56,6 +56,7 @@ Hier eine kurze Veranschaulichung, wie die Daten verarbeitet werden:
 
 ------------------------------------------------------------------------------------------------------------------------
 Durch diese Schritte wurden die Daten generiert, exportiert, bereinigt und analysiert.
+
 ------------------------------------------------------------------------------------------------------------------------
 
 ### Wo können die 5 Ziele der BA gefunden werden?
