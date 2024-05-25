@@ -7,7 +7,7 @@ Hier eine kurze Veranschaulichung, wie die Daten verarbeitet werden:
 - Jupyter Notebook Pipeline: Liest File "KeypointsExport(Nicht)Kompensiert" ein und exportiert File "KeypointsBereinigt(Nicht)Kompensiert"
 - Jupyter Notebook Datenanalse: Liest File "KeypointsBereinigt(Nicht)Kompensiert" ein
 
-  
+------------------------------------------------------------------------------------------------------------------------
 
 1. GitHub Projekt in Ordner kopieren
 
@@ -54,9 +54,9 @@ Hier eine kurze Veranschaulichung, wie die Daten verarbeitet werden:
 
 
 
-
-- Durch diese Schritte wurden die Daten generiert, exportiert, bereinigt und analysiert.
-
+------------------------------------------------------------------------------------------------------------------------
+Durch diese Schritte wurden die Daten generiert, exportiert, bereinigt und analysiert.
+------------------------------------------------------------------------------------------------------------------------
 
 ### Wo können die 5 Ziele der BA gefunden werden?
 - Dokumentation: https://zhaw.sharepoint.com/:f:/r/sites/DataAugmentationviaGameEngine/Freigegebene%20Dokumente/General/Bachelorarbeit?csf=1&web=1&e=yo0ug7
