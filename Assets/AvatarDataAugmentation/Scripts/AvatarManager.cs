@@ -28,6 +28,7 @@ public class AvatarManager : MonoBehaviour
         avatar = AssetDatabase.LoadAssetAtPath<Avatar>(avatarPath);
     }
 
+    // Dieses Procedure setzt den Avatar in die richtige Position und Rotation
     void SetAvatarRotation()
     {
         GameObject[] avatars = GameObject.FindGameObjectsWithTag("Kompensiert");
@@ -51,6 +52,7 @@ public class AvatarManager : MonoBehaviour
         }
     }
 
+    // Dieses Procedure weist den Animator Controller zu, wie auch das Script für den Export der Bewegung
     void AssignAnimatorController()
     {
         GameObject[] kompensiertObjects = GameObject.FindGameObjectsWithTag("Kompensiert");
@@ -90,6 +92,9 @@ public class AvatarManager : MonoBehaviour
         }
     }
 
+    // Dieses Procedure ändert alle Animationen zu humanoid, damit sie weiterverarbeitet werden können
+    // Zusätzlich werden die Animationen dem korrekten AnimatorController zugewiesen
+    // Ausserdem werden die Animationen mittels einer Transition zur Ausführung verknüpft
     void ChangeAnimationsToHumanoid()
     {
         string[] guids = AssetDatabase.FindAssets("t:AnimationClip");

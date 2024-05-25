@@ -36,7 +36,7 @@ public class ExportCSVNichtKompensiert : MonoBehaviour
         }
     }
 
-    // Verzug damit Positionierung von Avatar nicht gezeigt wird
+    // Verzug, damit Positionierung von Avatar nicht gezeigt wird
     IEnumerator StartRecordingAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -309,6 +309,8 @@ public class ExportCSVNichtKompensiert : MonoBehaviour
             frameCount++; 
     }
 
+    // Erkennt, ob es sich um eine neue Animation handelt.
+    // Wenn ja, wird der Frame Count zurück auf 1 gesetzt.
     void Update()
     {
         float currentAnimationTime = GetCurrentAnimationTime();
