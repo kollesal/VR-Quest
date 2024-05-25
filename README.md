@@ -28,6 +28,13 @@
 5. Den Code laufen lassen. Das 1. Mal wird es fehlschlagen, beim 2. Mal läuft es durch.
    Manchmal läuft es ein bisschen lange. Solange es nicht in T-Pose ist, wird es laufen.
 
+6. Bei der Ausführung der Unity Umgebung werden die zwei CSV Dateien befüllt
+   
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/82ec4387-2c20-45da-a23c-caabbc495cfc">
+
+7. 
+
+
 
 ### Wo können die 5 Ziele der BA gefunden werden?
 - Dokumentation: https://zhaw.sharepoint.com/:f:/r/sites/DataAugmentationviaGameEngine/Freigegebene%20Dokumente/General/Bachelorarbeit?csf=1&web=1&e=yo0ug7
@@ -37,6 +44,9 @@
 - Export von Körperkoordinaten in Unity mit Datenanalyse MediaPipe und DeepMotion (wie gleich/unterschiedlich die Werte sind): Assets/AvatarDataAugmentation/03 Data Analysis: DeepMotion and MediaPipe
 
 - VR Umgebung erstellt: In Projekt und Dokumentation enthalten
+
+
+------------------------------------------------------------------------------------------------------------------------
   
 ## Übergeordnetes Ziel:
 - Wie kann ich aus 1 Video verschiedene Videos/Animationen erstellen
