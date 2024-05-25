@@ -1,6 +1,12 @@
 # BA Data Augmentation via Game Engine
 
 ## Anleitung zum Aufbau der Umgebung
+
+Hier eine kurze Veranschaulichung, wie die Daten verarbeitet werden:
+- Unity Export: Erstellt File "KeypointsExport(Nicht)Kompensiert"
+- Jupyter Notebook Pipeline: Liest File "KeypointsExport(Nicht)Kompensiert" ein und exportiert File "KeypointsBereinigt(Nicht)Kompensiert"
+- Jupyter Notebook Datenanalse: Liest File "KeypointsBereinigt(Nicht)Kompensiert" ein
+
 1. GitHub Projekt in Ordner kopieren
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/bbe7b2fe-76e4-428a-ae57-5801d97c21cd">
@@ -30,10 +36,21 @@
 
 6. Bei der Ausführung der Unity Umgebung werden die zwei CSV Dateien befüllt
    
-   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/82ec4387-2c20-45da-a23c-caabbc495cfc">
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/a7d38f80-6ccb-4e86-9452-6f6874f84f0a">
 
-7. 
+8. Diese Files werden dann vom Jupyter Notebook "Drinking Task Pipeline Augmented" eingelesen
 
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/7f2fbb94-a3a4-4866-b046-0923d390ee22">
+
+9. In diesem Notebook werden die Files bereinigt und danach erneut für die Datenanalyse exportiert
+
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/27a9551a-fef0-4312-b90e-7a143daf58e0">
+
+10. Im Jupyter Notebook "01_ Datenanalyse Kompensiert und nicht Kompensiert" werdeb die bereinigten Files eingelesen
+    
+   <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/5263a75c-2cbb-4476-919c-f3a38af14ca2">
+
+- Durch diese Schritte wurden die Daten generiert, exportiert, bereinigt und analysiert.
 
 
 ### Wo können die 5 Ziele der BA gefunden werden?
