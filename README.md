@@ -7,6 +7,8 @@ Hier eine kurze Veranschaulichung, wie die Daten verarbeitet werden:
 - Jupyter Notebook Pipeline: Liest File "KeypointsExport(Nicht)Kompensiert" ein und exportiert File "KeypointsBereinigt(Nicht)Kompensiert"
 - Jupyter Notebook Datenanalse: Liest File "KeypointsBereinigt(Nicht)Kompensiert" ein
 
+  
+
 1. GitHub Projekt in Ordner kopieren
 
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/bbe7b2fe-76e4-428a-ae57-5801d97c21cd">
@@ -49,6 +51,9 @@ Hier eine kurze Veranschaulichung, wie die Daten verarbeitet werden:
 10. Im Jupyter Notebook "01_ Datenanalyse Kompensiert und nicht Kompensiert" werdeb die bereinigten Files eingelesen
     
    <img width="600" alt="image" src="https://github.com/kollesal/VR-Quest/assets/106104526/5263a75c-2cbb-4476-919c-f3a38af14ca2">
+
+
+
 
 - Durch diese Schritte wurden die Daten generiert, exportiert, bereinigt und analysiert.
 
